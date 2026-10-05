@@ -18,15 +18,14 @@ class starter {
 		if(y==x){
 			System.out.println("You are not higher or lower than the number!");
 		}
-		else{if(x<y){
+		else if(x<y){
 			System.out.println("You guessed lower than the number!");
 				
 			}
-			if(x>y){
+		else if(x>y){
 				System.out.println("You guessed higher than the number!");
 		}
 
-		}
 		System.out.println("The number was " + y);
 		
 	}
