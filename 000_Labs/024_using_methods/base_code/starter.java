@@ -13,9 +13,76 @@ class starter {
 	static ArrayList<String> arr = new ArrayList<String>();
 
 	public static void main(String args[]) throws InterruptedException {
-		System.out.println("Welcome to the type racing game!")
-
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Welcome to the type racing game!");
+		System.out.println("It is currently "+ getTime() +" and we're ready to play!");
+		System.out.println();
+		System.out.println("---------------------------------------------------");
+		System.out.println("Would you like to: ");
+		System.out.println("1 - Play random");
+		System.out.println("2 - Play set");
+		System.out.println("3 - Quit");
+		int answer = sc.nextInt();
+		sc.nextLine();
+		String a = getSentence();
+		String c = " ";
+		String b = " ";
+		if(answer==1){
+			System.out.println("You've chosen to randomly select a scentence.");
+			System.out.println();
+			System.out.println("---------------Your scentence is:---------------");
+			System.out.println(a);
+			System.out.println("------------------------------------------------");
+			countdown();
+			startTimer();
+			populateArrayList();
+			b = sc.nextLine();
+			double EndTimer = endTimer();
+			int amountLetter = lettersInSentence(a);
+			int amountLetterb = lettersInSentence(b);
+			int amountWordb= wordsInSentence(b);
+			int amountWord = wordsInSentence(a);
+			double lPerMin = amountLetterb/(EndTimer/60.0);
+			double wPerMin = amountWordb/(EndTimer/60.0);
+			System.out.println("Nice job! Here is your result!");
+			System.out.println("Time: "+endTimer());
+			System.out.println(lPerMin +" letters per minute!");
+			System.out.println(wPerMin+" words per minute");
+			System.out.println("Number of errors: " + compareSentences(a,b)+" / "+amountLetter);
+			System.out.println("------------------------------------------------");
+		}
+		else if(answer==2){
+			System.out.print("Please enter what number sentence you'd like to play(1-100): ");
+			int response = sc.nextInt();
+			c = getSentence(response);
+			sc.nextLine();
+			System.out.println();
+			System.out.println("---------------Your scentence is:---------------");
+			System.out.println(c);
+			System.out.println("------------------------------------------------");
+			countdown();
+			startTimer();
+			b = sc.nextLine();
+			double EndTimer = endTimer();
+			int amountLetter = lettersInSentence(c);
+			int amountLetterb = lettersInSentence(b);
+			int amountWordb= wordsInSentence(b);
+			int amountWord = wordsInSentence(c);
+			double lPerMin = amountLetterb/(EndTimer/60.0);
+			double wPerMin = amountWordb/(EndTimer/60.0);
+			System.out.println("Nice job! Here is your result!");
+			System.out.println("Time: "+endTimer());
+			System.out.println(lPerMin +" letters per minute!");
+			System.out.println(wPerMin+" words per minute");
+			System.out.println("Number of errors: " + compareSentences(c,b)+" / "+amountLetter);
+				System.out.println("------------------------------------------------");
+		}
 		
+	
+		else if(answer == 3){
+			System.out.println("Come back again!");
+
+		}
 	}
 
 	// This method returns the local current time as a String
@@ -67,7 +134,8 @@ class starter {
 		}
 	}
 
-	// This chooses 1 of the 100 sentences in the list to return.
+	// This chooses 1 of the 100 sentences in t
+	//The list to return.
 	public static String getSentence(){
 		populateArrayList();
 		int rand = (int)(Math.random()*100);
