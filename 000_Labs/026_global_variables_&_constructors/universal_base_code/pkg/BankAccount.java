@@ -26,6 +26,7 @@ public class BankAccount {
 		owner = name;
 		balance = 0;
 		isActive = true;
+		accountNumber=nextAccountNumber=1;
 
 	}
 	public BankAccount(String name, double initialBalance){
@@ -35,6 +36,14 @@ public class BankAccount {
 		accountNumber=nextAccountNumber+1;
 	}
 
-	// -------METHODS-------
+	public void printInfo(){
+		System.out.println("--------------------------------------");
+		System.out.println("Owner name: "+ owner);
+		System.out.println("Balance: "+balance);
+		if(isActive){
+			System.out.println("The account is active");
+		}
+		System.out.println("Available account number: "+accountNumber);
+	}
 
 }

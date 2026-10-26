@@ -13,7 +13,12 @@ class starter {
 		BankAccount account2 = new BankAccount("Bob");
 		BankAccount account3 = new BankAccount("Bobby", 1.0);
 		BankAccount account4 = new BankAccount("Billy", 1000.0);
-		System.out.println(account1);
+		account1.printInfo();
+		account2.printInfo();
+		account3.printInfo();
+		account4.printInfo();
+		
+		
 
 		
 	}
