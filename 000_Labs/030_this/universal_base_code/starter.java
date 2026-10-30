@@ -24,7 +24,39 @@ class starter {
 
 	public static void main(String args[]) {
 		// Your code goes below here
-		PooleDwarf test = new PooleDwarf();
+		int sameName = 0;
+		PooleDwarf Dwarf1 = new PooleDwarf(randName(),10);
+        PooleDwarf Dwarf2 = new PooleDwarf(randName(),1);
+		PooleDwarf Dwarf3 = new PooleDwarf(randName(),7);
+		PooleDwarf Dwarf4 = new PooleDwarf(randName(),100);
+		PooleDwarf Dwarf5 = new PooleDwarf(randName(),2);
+		PooleDwarf Dwarf6 = new PooleDwarf(randName(),30);
+		PooleDwarf Dwarf7= new PooleDwarf(randName(),11);
+		
+		if(Dwarf1.isSameName(Dwarf2.getName())){
+			sameName+=1;
+		}
+		if(Dwarf1.isSameName(Dwarf3.getName())){
+			sameName+=1;
+		}
+		if(Dwarf1.isSameName(Dwarf4.getName())){
+			sameName+=1;
+		}
+		if(Dwarf1.isSameName(Dwarf5.getName())){
+			sameName+=1;
+		}
+		if(Dwarf1.isSameName(Dwarf6.getName())){
+			sameName+=1;
+		}
+		if(Dwarf1.isSameName(Dwarf7.getName())){
+			sameName+=1;
+		}
+		System.out.println(Dwarf1.getName()+" was the name with "+ sameName+" matches!");
+
+		
+
+
+		
 		
 	}
 }
