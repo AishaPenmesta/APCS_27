@@ -53,15 +53,15 @@ class starter {
 
 //         // Part 6	--------------------------------------------- Extra
 
-// 		System.out.println("The movie " + mA.getMovieName() + " has a revenue of " + mA.revenueToString());
-//         System.out.println();
-// 		System.out.println("-----------------------------");
+ 		System.out.println("The movie " + mA.getMovieName() + " has a revenue of " + mA.revenueToString());
+         System.out.println();
+		System.out.println("-----------------------------");
 
 // 		// Part 7	--------------------------------------------- Extra
 
-// 		Movie dupC = mC.pirateMovie();			// Populates dupC with a copy of the movie mC
-// 		dupC.movieToString();
-// 		System.out.println("-----------------------------");
+		Movie dupC = mC.pirateMovie();			// Populates dupC with a copy of the movie mC
+ 		dupC.movieToString();
+ 		System.out.println("-----------------------------");
 
 	}
 }

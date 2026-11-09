@@ -40,7 +40,7 @@ public void addRating(double x){
 public double getRating(){
     return rating;
 }
-public boolean compareRatings(double ratingTwo){
+public boolean compareRatings(Movie ratingTwo){
 double x = ratingTwo.getRating();
 if(rating > x){
 return true;
@@ -48,6 +48,24 @@ return true;
 return false;
 }
 
+}
 
 
+public String revenueToString(){
+    int rev=revenue;
+    String ans="";
+    while(rev>=1000){
+        int three = rev%1000;
+        ans=three +","+ ans;
+        rev=rev/1000;
+    }
+    ans=rev+ans;
+    return ans;
+}
+
+public Movie pirateMovie(){
+    Movie temp = new Movie(movie, rating, numRatings, revenue);
+    return temp;
+    //or do return new Movie(movie, rating, numRatings,revenue);
+    //or just      return this;
 }
