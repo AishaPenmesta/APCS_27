@@ -31,10 +31,14 @@ class starter {
 	}
 
 	public static void printArray(String[] arr){
+		System.out.println(tvChars);
 
 	}
 
 	public static void leftShift(String [] arr){
+		for(int i = 0;i<tvChars.length;i++){
+			tvChars[i]=
+		}
 
 	}
 
