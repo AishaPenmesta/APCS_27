@@ -21,28 +21,45 @@ class starter {
 		printArray(tvChars);
 		System.out.println("---------------------------------------------");
 
-		/*
+		
 		printArray(tvChars);
 		System.out.println("---------------------------------------------");
 		leftShift(tvChars, 5);
 		printArray(tvChars);
 		System.out.println("---------------------------------------------");
-		*/
+		
 	}
 
 	public static void printArray(String[] arr){
-		System.out.println(tvChars);
-
+		for(int i = 0; i<arr.length;i++){
+			if(i==arr.length-1){
+				System.out.print(arr[i]);
+				System.out.println();
+				return;
+			}
+	System.out.print(arr[i]+", ");
+	}
 	}
 
 	public static void leftShift(String [] arr){
-		for(int i = 0;i<tvChars.length;i++){
-			tvChars[i]=
+		if(arr.length<=1){
+			return;
 		}
+		String first=arr[0];
+		for(int i = 0;i<arr.length-1;i++){
+			arr[i]=arr[i+1];
+				
+			}
+				arr[arr.length-1]=first;
+		return;
 
 	}
-
+	
 	public static void leftShift(String [] arr, int num){
+for(int i = 0;i<num;i++){
+	leftShift(arr);
+	
 
+}
 	}
 }
